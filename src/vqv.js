@@ -16,12 +16,12 @@
       #VQV!'
 */
 
-const vqv = (nome, idade) => {
-  if (typeof (nome) !== 'string' && typeof (idade) !== 'number') {
+const vqv = (name, age) => {
+  if (typeof (name) !== 'string' && typeof (age) !== 'number') {
     return undefined;
   }
-  return `Oi, meu nome é ${nome}!
-Tenho ${idade} anos,
+  return `Oi, meu nome é ${name}!
+Tenho ${age} anos,
 trabalho na Trybe e mando muito em programação!
 #VQV!`;
 };

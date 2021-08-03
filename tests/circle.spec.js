@@ -35,20 +35,18 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     assert.deepStrictEqual(arrayLength.length, 3, 'deu ruim no teste 3');
 
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-    const circleTest2 = circle();
-    assert.strictEqual(circleTest2, undefined, 'deu ruim no teste 4');
+    const nullCircleTest = circle();
+    assert.strictEqual(nullCircleTest, undefined, 'deu ruim no teste 4');
 
     // Teste que a função retorna, dentro de um objeto, a circunferência correta para um círculo de raio 2.
-    const arrayTest3 = Object.values(circle(2));
-    assert.deepStrictEqual(arrayTest3[2], 12.56, 'deu ruim no teste 5')
+    const circle2Test = Object.values(circle(2));
+    assert.deepStrictEqual(circle2Test[2], 12.56, 'deu ruim no teste 5')
 
     // Teste que a função retorna, dentro de um objeto, a área correta para um círculo de raio 3.
-    const arrayTest4 = Object.values(circle(3));
-    assert.deepStrictEqual(arrayTest4[1], 28.259999999999998, 'deu ruim no teste 6')
+    const circle3Test = Object.values(circle(3));
+    assert.deepStrictEqual(circle3Test[1], 28.259999999999998, 'deu ruim no teste 6')
 
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    const circleTest5 = circle(3);
-    const arrayTest5 = Object.values(circleTest5);
-    assert.deepStrictEqual(arrayTest5, [3, 28.259999999999998, 18.84], 'deu ruim no teste 7')
+    assert.deepStrictEqual(circle3Test, [3, 28.259999999999998, 18.84], 'deu ruim no teste 7')
   });
 });
