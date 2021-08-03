@@ -50,9 +50,9 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     // Teste que os dois productIds terminam com 123.
     // Referência (substring): https://www.techiedelight.com/get-last-n-characters-from-string-javascript/ 
     // Referência (substring): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring
-    const check1 = result0.details.productId.substring(result0.details.productId.length - 3)
-    const check2 = result1.details.productId.substring(result1.details.productId.length - 3)
-    assert.strictEqual(check1, '123')
-    assert.strictEqual(check2, '123')
+    const check1 = result0.details.productId.substring(result0.details.productId.length - 3);
+    const check2 = result1.details.productId.substring(result1.details.productId.length - 3);
+    assert.strictEqual(check1, '123');
+    assert.strictEqual(check2, '123');
   });
 });
