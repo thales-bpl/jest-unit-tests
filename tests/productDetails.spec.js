@@ -30,12 +30,29 @@ const productDetails = require('../src/productDetails');
 
 describe('6 - Implemente os casos de teste para a função `productDetails`', () => {
   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
-    assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
+    const productResults = productDetails('álcool', 'máscara'); 
+    const result0 = productResults[0];
+    const result1 = productResults[1];
     // Teste que o retorno da função é um array.
+    assert.strictEqual(Array.isArray(productResults), true);
+
     // Teste que o array retornado pela função contém dois itens dentro.
+    assert.strictEqual(productResults.length, 2);
+
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    assert.strictEqual(typeof result0 && typeof result1, 'object');
+
     // Teste que os dois objetos são diferentes entre si.
+    const isDiff = result0 === result1;
+    assert.strictEqual(isDiff, false);
+
     // Teste que os dois productIds terminam com 123.
+    // Referência (substring): https://www.techiedelight.com/get-last-n-characters-from-string-javascript/ 
+    // Referência (substring): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring
+    const check1 = result0.details.productId.substring(result0.details.productId.length - 3)
+    const check2 = result1.details.productId.substring(result1.details.productId.length - 3)
+    assert.strictEqual(check1, '123')
+    assert.strictEqual(check2, '123')
   });
 });
